@@ -8,7 +8,7 @@ on:
     
 env:
   AZURE_WEBAPP_NAME : Async-API
-  AZUR_WEBAPP_PACKAGE_PATH: './publish' 
+  AZUR_WEBAPP_PACKAGE_PATH: './home/runner/work/WT.AsyncAPI/WT.AsyncAPI/WT.AsyncProductAPI/bin/Release/net6.0/publish/' 
 
 
 jobs:
