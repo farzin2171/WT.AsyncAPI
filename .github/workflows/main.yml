@@ -30,7 +30,7 @@ jobs:
         run: dotnet build ./WT.AsyncProductAPI/WT.AsyncProductAPI.sln  --configuration Release --no-restore
         
       - name: Publish
-        run : dotnet publish ./WT.AsyncProductAPI/WT.AsyncProductAPI.sln  --configuration Release --no-build --output '${{env.AZUR_WEBAPP_PACKAGE_PATH}}'
+        run : dotnet publish ./WT.AsyncProductAPI/WT.AsyncProductAPI.sln  --configuration Release --no-build --property:PackageOutputPath='${{env.AZUR_WEBAPP_PACKAGE_PATH}}'
         
       - name: Deployment
         uses: azure/webapps-deploy@v2
