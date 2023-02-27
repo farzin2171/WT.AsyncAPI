@@ -33,7 +33,7 @@ jobs:
         run : dotnet publish ./WT.AsyncProductAPI/WT.AsyncProductAPI.sln  --configuration Release --no-restore --output '${{env.AZUR_WEBAPP_PACKAGE_PATH}}'
         
       - name: Deployment
-      - uses: azure/webapps-depoy@v2
+        uses: azure/webapps-depoy@v2
         with:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           publish-profile: ${{env.AZURE_PUBLISH_PROFILE}}
